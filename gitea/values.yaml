@@ -340,7 +340,7 @@ startupProbe:
 ##
 livenessProbe:
   enabled: true
-  path: /api/healthz
+  path: /
   initialDelaySeconds: 200
   periodSeconds: 10
   timeoutSeconds: 5
@@ -362,7 +362,7 @@ livenessProbe:
 ##
 readinessProbe:
   enabled: true
-  path: /api/healthz
+  path: /
   initialDelaySeconds: 30
   periodSeconds: 5
   timeoutSeconds: 1
