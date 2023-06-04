@@ -15,7 +15,7 @@ spec:
       kind: '*'
   description: Project to configure my own personalized gitea installation with Argocd
   destinations:
-    - namespace: gitea-test
+    - namespace: gitea-dev
       server: https://kubernetes.default.svc
   sourceRepos:
     - https://github.com/loydpadgett/gitea_local.git

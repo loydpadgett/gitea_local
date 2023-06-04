@@ -79,7 +79,7 @@ image:
   debug: false
 ## @param replicaCount Number of Gitea Pods to run (requires ReadWriteMany PVC support)
 ##
-replicaCount: 1
+replicaCount: 3
 ## @param adminUsername User of the application
 ## ref: https://github.com/bitnami/containers/tree/main/bitnami/gitea#configuration
 ##

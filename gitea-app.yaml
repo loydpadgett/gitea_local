@@ -4,7 +4,7 @@ metadata:
   name: gitea
 spec: 
   destination:
-    namespace: gitea-test
+    namespace: gitea-dev
     server: https://kubernetes.default.svc
   project: gitea
   source:
