@@ -256,17 +256,19 @@ podAntiAffinityPreset: soft
 ## @param nodeAffinityPreset.values Node label values to match. Ignored if `affinity` is set.
 ##
 nodeAffinityPreset:
-  type: ""
+  type: "soft"
   ## E.g.
   ## key: "kubernetes.io/e2e-az-name"
   ##
-  key: ""
+  key: nodetype
+  operator: In
+  values:
+  - worker
   ## E.g.
   ## values:
   ##   - e2e-az1
   ##   - e2e-az2
   ##
-  values: []
 ## @param affinity Affinity for pod assignment
 ## Ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity
 ## Note: podAffinityPreset, podAntiAffinityPreset, and nodeAffinityPreset will be ignored when it's set
