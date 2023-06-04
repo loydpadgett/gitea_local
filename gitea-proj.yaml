@@ -1,0 +1,21 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: gitea
+spec:
+  roles:
+    - name: read-sync
+      description: read and sync privileges.
+      policies:
+        - p, proj:gitea:read-sync, applications, get, gitea/*, allow
+        - p, proj:gitea:read-sync, applications, sync, gitea/*, allow
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  description: Project to configure my own personalized gitea installation with Argocd
+  destinations:
+    - namespace: gitea-test
+      server: https://kubernetes.default.svc
+  sourceRepos:
+    - https://github.com/loydpadgett/gitea_local.git
