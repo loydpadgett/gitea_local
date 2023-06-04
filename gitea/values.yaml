@@ -119,7 +119,7 @@ args: []
 ## terminate the single previous pod, so that the new, incoming pod can attach to the PV
 ##
 updateStrategy:
-  type: RollingUpdate
+  type: Recreate
 ## @param priorityClassName Gitea pods' priorityClassName
 ##
 priorityClassName: ""
