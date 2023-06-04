@@ -340,11 +340,11 @@ startupProbe:
 ##
 livenessProbe:
   enabled: true
-  path: /
-  initialDelaySeconds: 600
+  path: /api/healthz
+  initialDelaySeconds: 200
   periodSeconds: 10
   timeoutSeconds: 5
-  failureThreshold: 5
+  failureThreshold: 10
   successThreshold: 1
 ## Configure extra options for readiness probe
 ## Gitea core exposes / to unauthenticated requests, making it a good
@@ -362,7 +362,7 @@ livenessProbe:
 ##
 readinessProbe:
   enabled: true
-  path: /
+  path: /api/healthz
   initialDelaySeconds: 30
   periodSeconds: 5
   timeoutSeconds: 1
