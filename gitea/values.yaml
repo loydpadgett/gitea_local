@@ -455,7 +455,7 @@ service:
 ingress:
   ## @param ingress.enabled Enable ingress controller resource
   ##
-  enabled: true
+  enabled: false
 
   ## @param ingress.pathType Ingress Path type
   ##
