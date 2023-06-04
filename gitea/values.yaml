@@ -341,10 +341,10 @@ startupProbe:
 livenessProbe:
   enabled: true
   path: /
-  initialDelaySeconds: 200
+  initialDelaySeconds: 600
   periodSeconds: 10
   timeoutSeconds: 5
-  failureThreshold: 10
+  failureThreshold: 5
   successThreshold: 1
 ## Configure extra options for readiness probe
 ## Gitea core exposes / to unauthenticated requests, making it a good
